@@ -14,15 +14,26 @@ body {
   display: flex;
   height: 4rem;
   justify-content: right;
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
-  padding: 0 5rem;
+  padding: 0 10rem;
   overflow: hidden;
 }
 
 .nameText {
+  color: #eeeff1;
   font-family: "Assistant", sans-serif;
-  padding-top: 8rem;
+  padding: 12rem 0 0 10rem;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.header {
+  height: 25rem;
+  background-color: #1b6296;
+  background-image: url("/images/blue-leaves.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .logo {
@@ -44,7 +55,7 @@ a {
 }
 
 a:hover {
-  color: #384ea8;
+  color: #1b6296;
 }
 
 /* a:after { */
@@ -66,7 +77,8 @@ a:hover {
 } */
 
 a.active {
-  color: #c90e2d;
+  /* color: #c90e2d; */
+  color: #1b6296;
   left: 3%;
   width: 90%;
 }
@@ -89,7 +101,7 @@ a.active:after {
   font-size: larger;
   position: relative;
   text-align: justify;
-  padding: 0 5rem;
+  padding: 0 10rem;
 }
 
 li {
@@ -112,7 +124,8 @@ img {
   /* max-width: 55%; */
   height: 20em;
   float: right;
-  padding-top: 5rem;
+  padding-top: 2rem;
+  padding-right: 10rem;
   /* margin: 5rem 0rem 0rem 40%; */
   /* -webkit-transform: scaleX(-1);
   transform: scaleX(-1); */
@@ -120,19 +133,19 @@ img {
 }
 
 .welcome {
-  padding-top: 8rem;
+  padding-top: 5rem;
 }
 
 .welcomeNote {
   font-size: medium;
   /* height: 50vh; */
-  inline-size: 30rem;
+  inline-size: 35rem;
   font-family: "Assistant", sans-serif;
   line-height: 1.2rem;
 }
 
 button {
-  background-color: #c90e2d;
+  background-color: #1b6296;
   border: none;
   color: white;
   padding: 10px 22px;
@@ -146,5 +159,5 @@ button {
 
 .btnMore {
   margin-top: 0%;
-  padding: 10px 5rem 10px 5rem;
+  padding: 10px 5rem 10px 10rem;
 }
