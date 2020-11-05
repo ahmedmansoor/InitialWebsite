@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&family=Barlow:wght@100;200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&display=swap");
 
 body {
   background: #eeeff1;
@@ -8,50 +9,83 @@ body {
   margin: 0%;
 }
 
-#tabBar {
+@font-face {
+  font-family: "brand";
+  src: url("/fonts/NoeDisplay-Medium.ttf");
+}
+
+@font-face {
+  font-family: "heading1";
+  src: url("/fonts/Charter-Bold.ttf");
+}
+
+@font-face {
+  font-family: "heading2";
+  src: url("/fonts/MaratPro-Bold.otf");
+}
+
+/* @font-face {
+  font-family: "parag";
+  src: url("/fonts/MaratPr");
+} */
+
+.tabBar {
   align-items: center;
   background-color: #fff;
   display: flex;
   height: 4rem;
-  justify-content: right;
   position: fixed;
   width: 100%;
-  padding: 0 10rem;
   overflow: hidden;
 }
 
-.nameText {
-  color: #eeeff1;
-  font-family: "Assistant", sans-serif;
-  padding: 12rem 0 0 10rem;
-  margin: 0;
-  font-size: 3rem;
-}
-
-.header {
-  height: 25rem;
-  background-color: #1b6296;
-  background-image: url("/images/blue-leaves.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .logo {
+  padding: 0 40% 0 10rem;
   color: #242424;
   font-size: 20px;
   margin-top: 21px;
-  margin-right: 40px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "brand";
+  letter-spacing: 1.5px;
+  /* margin-right: 70px; */
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+}
+
+li {
+  display: table-cell;
+}
+
+ul {
+  display: table;
+  list-style: none;
+  overflow: hidden;
+  text-align: center;
 }
 
 a {
-  font-family: "Barlow 200", sans-serif;
+  text-decoration: none;
+  color: #242424;
+  font-size: small;
+  font-family: "Assistant 300", sans-serif;
+  letter-spacing: 0.05em;
+  /* font-family: "Assistant 300", sans-serif;
   color: #242424;
   letter-spacing: 0.05em;
   padding: 7px 20px;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: small;
+  font-size: small; */
+  /* text-transform: uppercase; */
+}
+
+.home {
+  padding: 7px 20px;
+}
+
+.about {
+  padding: 7px 20px;
+}
+
+.clients {
+  padding: 7px 20px;
 }
 
 a:hover {
@@ -62,13 +96,13 @@ a:hover {
 /* background: none repeat scroll 0 0 transparent; */
 /* transition: width 0.4s ease 0s, left 0.3s ease 0s; */
 /* background: #384ea8;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  width: 0; */
+bottom: 0;
+content: "";
+display: block;
+height: 2px;
+left: 50%;
+position: absolute;
+width: 0; */
 /* } */
 
 /* a:hover:after {
@@ -79,14 +113,46 @@ a:hover {
 a.active {
   /* color: #c90e2d; */
   color: #1b6296;
+  font-family: "Assistant 300", sans-serif;
   left: 3%;
   width: 90%;
+  position: relative;
 }
 
 a.active:after {
   color: #384ea8;
   left: 3%;
   width: 90%;
+}
+
+.header {
+  height: 30rem;
+  background-color: #1b6296;
+  background-image: url("/images/blue-leaves.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: left;
+}
+
+.headerText1 {
+  color: #eeeff1;
+  font-family: "heading1";
+  padding: 11rem 0 0 10rem;
+  margin: 0;
+  font-size: 3rem;
+  inline-size: 35rem;
+  line-height: 3.2rem;
+  letter-spacing: 1.5px;
+}
+
+.headerText2 {
+  color: #eeeff1;
+  font-family: "Assistant", sans-serif;
+  font-size: 20px;
+  padding-left: 10rem;
+  inline-size: 35rem;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
 }
 
 #banner {
@@ -104,22 +170,6 @@ a.active:after {
   padding: 0 10rem;
 }
 
-li {
-  display: table-cell;
-  padding: 10px 0;
-  position: relative;
-}
-
-ul {
-  display: table;
-  list-style: none;
-  overflow: hidden;
-  text-align: center;
-  padding: 0%;
-  padding-right: 3rem;
-  width: auto;
-}
-
 img {
   /* max-width: 55%; */
   height: 20em;
@@ -133,18 +183,21 @@ img {
 }
 
 .welcome {
+  font-family: "heading2";
   padding-top: 5rem;
 }
 
 .welcomeNote {
-  font-size: medium;
   /* height: 50vh; */
-  inline-size: 35rem;
+  font-family: "parag";
+  font-size: medium;
   font-family: "Assistant", sans-serif;
+  inline-size: 35rem;
+  letter-spacing: 0.5px;
   line-height: 1.2rem;
 }
 
-button {
+.learn {
   background-color: #1b6296;
   border: none;
   color: white;
@@ -160,4 +213,48 @@ button {
 .btnMore {
   margin-top: 0%;
   padding: 10px 5rem 10px 10rem;
+}
+
+.contact {
+  background-color: #fff;
+  border: #1b6296;
+  margin: 10px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 7px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-size: small;
+  border-radius: 5px;
+}
+
+.contact a {
+  color: #1b6296;
+}
+
+/* .contact:hover {
+  background-color: #1b6296;
+  color: #fff;
+}
+
+.contact a :hover {
+  color: #fff;
+} */
+
+.footer {
+  align-items: center;
+  background-color: #242424;
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.footerNote {
+  color: #fff;
+  font-family: "heading1";
+  font-size: small;
+  letter-spacing: 0.8px;
 }
