@@ -36,11 +36,6 @@ h4 {
   margin: 0;
 }
 
-/* @font-face {
-  font-family: "parag";
-  src: url("/fonts/MaratPr");
-} */
-
 .navBar {
   align-items: center;
   background: #fff;
@@ -53,27 +48,19 @@ h4 {
   z-index: 10;
 }
 
-.blue {
-  align-items: center;
-  background: #1b6296;
-  display: flex;
-  height: 4rem;
-  position: fixed;
-  width: 100%;
-  overflow: hidden;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-  z-index: 10;
-}
-
 .logo {
   padding: 0 40% 0 10rem;
-  color: #242424;
-  font-size: 20px;
   margin-top: 21px;
-  font-family: "brand";
-  letter-spacing: 1.5px;
   /* margin-right: 70px; */
   /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+}
+
+.logo a {
+  color: #242424;
+  text-decoration: none;
+  font-family: "brand";
+  font-size: 20px;
+  letter-spacing: 1.5px;
 }
 
 li {
@@ -90,7 +77,7 @@ ul {
 a {
   text-decoration: none;
   color: #242424;
-  font-size: small;
+  font-size: medium;
   font-family: "Assistant 300", sans-serif;
   letter-spacing: 0.05em;
   /* font-family: "Assistant 300", sans-serif;
@@ -112,10 +99,6 @@ a {
 
 .clients {
   padding: 7px 20px;
-}
-
-a:hover {
-  color: #1b6296;
 }
 
 /* a:after { */
@@ -146,12 +129,12 @@ a.active {
 }
 
 a.active:after {
-  color: #384ea8;
+  color: #1b6296;
   left: 3%;
   width: 90%;
 }
 
-.header {
+.banner {
   height: 30rem;
   background-color: #1b6296;
   background-image: url("/images/blue-leaves.jpg");
@@ -160,7 +143,7 @@ a.active:after {
   text-align: left;
 }
 
-.headerText1 {
+.bannerHeading {
   color: #eeeff1;
   font-family: "heading1";
   padding: 11rem 0 0 10rem;
@@ -171,7 +154,7 @@ a.active:after {
   letter-spacing: 1.5px;
 }
 
-.headerText2 {
+.bannerText {
   color: #eeeff1;
   font-family: "Assistant", sans-serif;
   font-size: 20px;
@@ -181,10 +164,63 @@ a.active:after {
   line-height: 1.7rem;
 }
 
-#banner {
+button {
+  padding: 7px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+.btnContact1 {
+  background-color: #1b6296;
+  border: #1b6296;
+  margin-left: 10px;
+  border-width: 1px;
+  font-size: small;
+  width: 9em;
+}
+
+.btnContact2 {
+  background: #fff;
+  border: #1b6296;
+  margin-left: 10rem;
+  border-width: 1px;
+  border-style: solid;
+  width: 13em;
+  height: 3em;
+}
+
+.btnContact1 a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Assistant 300", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.btnContact2 a {
+  text-decoration: none;
+  color: #1b6296;
+  font-family: "Assistant 300", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.contactNum {
+  font-size: 14px;
+  font-family: "text", sans-serif;
+  inline-size: 35rem;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  color: #1b6296;
+}
+
+/* .btnContact2 :hover {
+  color: #fff;
+} */
+
+#content {
   align-items: flex-start;
-  /* background-color: #eeeff1; */
-  /* background-position: left; */
   background-repeat: no-repeat;
   background-size: cover;
   color: #242424;
@@ -196,7 +232,7 @@ a.active:after {
   padding: 0 10rem;
 }
 
-.wcPic {
+.cPic {
   max-width: 55%;
   height: 20em;
   float: right;
@@ -208,14 +244,13 @@ a.active:after {
   position: relative;
 }
 
-.wc {
+.contentHeading {
   font-family: "heading2";
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
-.wcNote1 {
+.cNote1 {
   /* height: 50vh; */
-  font-family: "parag";
   font-size: medium;
   font-family: "text", sans-serif;
   inline-size: 35rem;
@@ -223,9 +258,8 @@ a.active:after {
   line-height: 1.5rem;
 }
 
-.wcNote2 {
+.cNote2 {
   /* height: 50vh; */
-  font-family: "parag";
   font-size: medium;
   font-family: "text", sans-serif;
   inline-size: 60rem;
@@ -233,7 +267,7 @@ a.active:after {
   line-height: 1.5rem;
 }
 
-.wcPoints {
+.cPoints {
   font-family: "text";
   line-height: 1rem;
   font-size: medium;
@@ -251,40 +285,6 @@ a.active:after {
   font-size: small;
   border-radius: 5px;
 }
-
-.btnMore {
-  margin-top: 0%;
-  padding: 10px 5rem 10px 10rem;
-}
-
-.contact {
-  background-color: #fff;
-  border: #1b6296;
-  margin: 10px;
-  border-width: 1px;
-  border-style: solid;
-  padding: 7px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-size: small;
-  border-radius: 5px;
-  width: 8em;
-}
-
-.contact a {
-  color: #1b6296;
-}
-
-/* .contact:hover {
-  background-color: #1b6296;
-  color: #fff;
-}
-
-.contact a :hover {
-  color: #fff;
-} */
 
 .row {
   display: -ms-flexbox;
