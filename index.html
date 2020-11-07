@@ -8,18 +8,20 @@
   </head>
 
   <body>
-    <nav class="tabBar">
+    <nav class="navBar">
       <h3 class="logo">Deliord Developers</h3>
       <div>
-        <ul>
-          <li class="home"><a href="/index.html" class="active">Home</a></li>
-          <li class="about"><a href="/pages/about.html">About</a></li>
-          <li class="clients"><a href="/pages/clients.html">Clients</a></li>
-          <!-- <li class="contact"><a href="/pages/contact.html">Contact Us</a></li> -->
-          <button type="button" class="contact">
-            <a href="/pages/contact.html">Contact Us</a>
-          </button>
-        </ul>
+        <nav>
+          <ul>
+            <li class="home"><a href="/index.html" class="active">Home</a></li>
+            <li class="about"><a href="/pages/about.html">About</a></li>
+            <li class="clients"><a href="/pages/clients.html">Clients</a></li>
+            <!-- <li class="contact"><a href="/pages/contact.html">Contact Us</a></li> -->
+            <button type="button" class="contact">
+              <a href="/pages/contact.html">Contact Us</a>
+            </button>
+          </ul>
+        </nav>
       </div>
     </nav>
     <header class="header">
@@ -31,24 +33,49 @@
     </header>
     <!-- <div class="slide"></div>  -->
 
-    <!-- <div>
-      <img src="/images/programmer_desk.svg" />
-    </div> -->
+    <div>
+      <img class="wcPic" src="/images/programmer_desk.svg" />
+    </div>
 
     <section id="banner">
-      <div class="welcome">
-        <h1>Welcome</h1>
-        <p class="welcomeNote">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-          recusandae repellat ab iusto aperiam reprehenderit, corrupti
-          perspiciatis, magni veritatis ipsam sapiente debitis animi voluptates
-          sit mollitia reiciendis in. Voluptate, vero.
+      <div class="wc">
+        <h1>How We Stand Out</h1>
+        <p class="wcNote1">
+          We are Proactive Experts. We are No “Yes-Man” or just “Another Dev
+          Shop”. We are experts in providing digital solutions with a consulting
+          led approach that fuels innovation and business efficiency.
         </p>
+        <div class="wcPoints">
+          <br />
+          <li>- Best in class discovery, planning and documentation</li>
+          <br />
+          <li>- World-class UI/UX design</li>
+          <br />
+          <li>- Engineering with industry best practices</li>
+          <br />
+          <li>- Continuous client support</li>
+        </div>
+        <br />
       </div>
     </section>
     <div class="btnMore">
       <button type="button" class="learn">Learn more</button>
     </div>
+
+    <section id="banner">
+      <div class="wc">
+        <h1>Project Development Phases</h1>
+        <p class="wcNote2">
+          With our IT consulting expertise you can get to the starting line of
+          launching your dream product! With our support, you will have a clear
+          plan of why, what and how to do it. Together we can shape and refine
+          the concept, scope and roadmap for software implementation of your
+          project.
+        </p>
+      </div>
+    </section>
+
+    <!-- cards -->
 
     <div class="row">
       <div class="cardCover">
@@ -61,7 +88,7 @@
               <div class="imgContainer">
                 <img class="cardImage" src="/images/blue-leaves.jpg" />
               </div>
-              <h4 class="cardHeading">
+              <h4 class="cardHeading1">
                 <b>Requirement Analysis & Specification</b>
               </h4>
             </div>
@@ -69,8 +96,7 @@
               We dig deeper by asking some questions to truly understand your
               project goals and priorities. We clarify the Project Concept,
               define the main software functionalities and dependencies early
-              on. This results in specified User Stories and Epics – the
-              building blocks of our work for the next phases.
+              on.
             </p>
           </div>
         </div>
@@ -84,16 +110,14 @@
             <div class="imgContainer">
               <img class="cardImage" src="/images/blue-leaves.jpg" />
             </div>
-            <h4 class="cardHeading">
+            <h4 class="cardHeading2">
               <b>Wireframes & UI/UX Design</b>
             </h4>
             <p class="cardNote2">
               We add finishing touches to the concept by turning it into a
-              visual User Experience. We get in the shoes of the end user – we
-              map the user journey and picture how the Web and Mobile App Design
-              will look & feel. We create high-level Wireframes or Mockups –
-              layouts of the User Interface to make it easier to understand the
-              main screens of the app.
+              visual User Experience. We create high-level Wireframes or Mockups
+              – layouts of the User Interface to make it easier to understand
+              the main screens of the app.
             </p>
           </div>
         </div>
@@ -107,17 +131,14 @@
             <div class="imgContainer">
               <img class="cardImage" src="/images/blue-leaves.jpg" />
             </div>
-            <h4 class="cardHeading">
+            <h4 class="cardHeading3">
               <b>Software Architecture</b>
             </h4>
             <p class="cardNote3">
               We're ready to move on the Software Design of the application! We
               make a high-level Technical Architecture – we go through the
               skeleton of the app, map key technical components and create a
-              bird's eye model of how the system will function. This is a key
-              step, before we continue with software development. We also
-              recommend a Technical Stack with Technologies & Infrastructure to
-              best suit your product and business needs.
+              bird's eye model of how the system will function.
             </p>
           </div>
         </div>
@@ -130,4 +151,16 @@
       </div>
     </footer>
   </body>
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 300) {
+          $(".navBar").css("background", "blue");
+        } else {
+          $(".navBar").css("background", "#333");
+        }
+      });
+    });
+  </script>
 </html>
