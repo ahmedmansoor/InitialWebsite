@@ -59,7 +59,7 @@ h4 {
   color: #242424;
   text-decoration: none;
   font-family: "brand";
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 1.5px;
 }
 
@@ -246,6 +246,7 @@ button {
 
 .contentHeading {
   font-family: "heading2";
+  inline-size: 35rem;
   padding-top: 1rem;
 }
 
@@ -262,7 +263,7 @@ button {
   /* height: 50vh; */
   font-size: medium;
   font-family: "text", sans-serif;
-  inline-size: 60rem;
+  inline-size: 55rem;
   letter-spacing: 0.5px;
   line-height: 1.5rem;
 }
@@ -273,7 +274,7 @@ button {
   font-size: medium;
 }
 
-.learn {
+/* .learn {
   background-color: #1b6296;
   border: none;
   color: white;
@@ -284,7 +285,7 @@ button {
   font-size: 16px;
   font-size: small;
   border-radius: 5px;
-}
+} */
 
 .row {
   display: -ms-flexbox;
@@ -310,6 +311,13 @@ button {
 .cardCover {
   margin: 3rem 0 3rem 3rem;
   padding: 0;
+  /* height: 580px; */
+}
+
+.clientCover {
+  margin: 1rem 0 3rem 3rem;
+  padding: 0;
+  height: 400px;
 }
 
 .card {
@@ -318,6 +326,13 @@ button {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 19rem;
+  background-color: #fff;
+}
+
+.clientCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 22rem;
   background-color: #fff;
 }
 
@@ -383,6 +398,10 @@ button {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
 
+.clientCard:hover {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+}
+
 .cardContainer {
   flex-direction: column;
 }
@@ -394,6 +413,13 @@ button {
 .cardImage {
   /* background-image: url("/images/blue-leaves.jpg"); */
   max-width: 19rem;
+  background-size: cover;
+  background-color: #1b6296;
+}
+
+.clientImage {
+  background-image: url("/images/blue-leaves.jpg");
+  max-width: 22rem;
   background-size: cover;
   background-color: #1b6296;
 }
@@ -428,7 +454,43 @@ button {
   text-align: left;
 }
 
+.clientHeading1 {
+  color: #242424;
+  font-size: 23px;
+  text-align: left;
+  font-family: "Bitter", serif;
+  line-height: 2rem;
+  margin: 15px 0px 0px 25px;
+}
+
+.clientNote1 {
+  font-family: "text", sans-serif;
+  padding: 0 0 0 25px;
+  /* font-size: 15px; */
+  inline-size: 18rem;
+  /* letter-spacing: 1px; */
+  line-height: 1.5rem;
+  text-align: left;
+  /* margin-top: 2px; */
+}
+
+.btnMoreDetails {
+  background-color: #1b6296;
+  border: #1b6296;
+  margin-left: 25px;
+  border-width: 1px;
+  font-size: small;
+  width: 10em;
+  height: 3em;
+  margin-bottom: 2em;
+}
+
+.btnMoreDetails a {
+  color: #fff;
+}
+
 .footer {
+  margin-top: 20rem;
   align-items: center;
   background-color: #242424;
   display: flex;
